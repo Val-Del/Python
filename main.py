@@ -1,10 +1,17 @@
 def main():
-    hi()
+    a = float(input("a"))
+    b = float(input("b"))
+    addition(a, b)
+    # hi()
 
 
-def hi():
-    name = input('nom : ')
-    print(f'salut, {name}')
+def addition(a, b):
+    print(a + b)
+
+
+# def hi():
+#     name = input('nom : ')
+#     print(f'salut, {name}')
 
 
 main()
