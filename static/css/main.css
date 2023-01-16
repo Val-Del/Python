@@ -1,0 +1,65 @@
+@charset "utf-8";
+
+
+header, section, footer, aside, nav, main, article, figure {
+    display: block; 
+}
+div, header, nav, article, section, aside, footer, h1, h2, h3, h4, h5, h6, p, a, ul, li, figure, figcaption, class, img { 
+	margin: 0;
+	padding: 0;
+}
+*{
+    box-sizing: border-box;
+}
+img, object, embed, canvas, video, audio, picture, svg {
+	max-width: 100%;
+	height: auto;
+}
+li {
+    list-style-type: none;
+}
+
+
+body {
+    margin: 0px;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+.center {
+    width: 70%;
+    margin: 0 auto;
+}
+a {
+
+  text-decoration: none; 
+}
+
+
+body {
+    background-color: rgb(218, 224, 224);
+    font-family: 'Roboto', sans-serif;
+}
+input[type="text"], p{
+    padding: 0;
+    margin-bottom:  1rem;
+}
+form{
+    padding: 2rem;
+    margin: 10rem;
+    background-color: antiquewhite;
+    width: fit-content;
+    border-radius: 5px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    
+}
+input, p {
+    line-height: 1.3rem;
+    width: 250px;
+}
+p { 
+    text-align: center;
+    font-size: 1.2rem;
+}
