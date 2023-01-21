@@ -9,22 +9,41 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="wrap flex">
-        <a class="btn" href="hello">Hello page</a>
-        <!-- <form class="index" >
-            <p>Pokemon à chercher :</p>
-            <input type="text" name="inputAPI">
-            <input class="btn" type="submit" name="submitAPI">
-        </form> -->
+    <a class="btn nav" href="hello">Hello page</a>
+    <h3>Ajax JS</h3>
+    <div class="wrap flex">      
         <div class="flex">
             <p>Pokemon à chercher :</p>
             <textarea name="inputAPI" class="inputAPI"></textarea>
             <button class="btnAPI">SEND</button>
-            <p>réponse : </p>
+            <p>Type : </p>
             <p class="repAPI"></p>
-        </div>
-        
+        </div> 
     </div>
+    <h3>Use BDD</h3>
+    <form action="pokemons" class="flex" method="post">
+        <p>Pokemon dans la BDD :</p>
+        <input type="submit" value="Get">
+    </form>   
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Type</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for pokemon in pokemons %}
+            <tr>
+                <td>{{ pokemon[0] }}</td>
+                <td>{{ pokemon[1] }}</td>
+                <td>{{ pokemon[2] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
     <script src="{{url_for('static', filename='js/ajax.js')}}"></script>
 </body>
 </html>

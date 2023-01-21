@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
 </head>
 <body>
-    <a class="btn" href="/">Home</a>
+    <a class="btn nav" href="/">Home</a>
     <form action="greet" method="post" class="hello">
         {% for message in get_flashed_messages() %}
             <p>{{message}}</p>

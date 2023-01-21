@@ -48,7 +48,7 @@ body {
     background-color: rgb(218, 224, 224);
     font-family: 'Roboto', sans-serif;
 }
-input[type="text"], p{
+.hello input[type="text"],  .hello p{
     
     margin-bottom:  1rem;
     padding: 0 1rem;
@@ -100,4 +100,21 @@ form.index input:first-of-type {
 }
 form.index input:last-of-type {
     margin-left: 1rem;
+}
+.nav {
+    margin-top: 1rem;
+    margin-left: 1rem;
+}
+.btnAPI {
+    margin-left: 1rem;
+    padding: 0.6rem 1.2rem;
+}
+h3 {
+    text-align: center;
+    font-size: 2rem;
+    margin: 2rem 0;
+}
+table {
+    margin: 0 auto;
+    margin-top: 2rem;
 }

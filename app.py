@@ -1,4 +1,6 @@
-from flask import Flask, render_template, request, flash
+from flask import Flask, render_template, request, flash, jsonify
+from FetchPostgres import get_pokemon
+import json
 app = Flask(__name__)
 app.secret_key = "key"
 
@@ -13,6 +15,10 @@ def hello():
 
 @app.route("/greet", methods=["POST"])
 def greet():
-    flash('hi '+ str(request.form['input_name']) +", psartek ?")
+    flash('Salut '+ str(request.form['input_name']) +", ça va ?")
     return render_template("form.html")
 
+@app.route("/pokemons", methods=["POST"])
+def pokemons():
+    pokemons_data = json.loads(get_pokemon())
+    return render_template("index.html", pokemons=pokemons_data)
