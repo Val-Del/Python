@@ -9,13 +9,22 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
 </head>
 <body>
-    <form action="greet" method="post">
-        {% for message in get_flashed_messages() %}
-            <p>{{message}}</p>
-        {% endfor %}
-        <input type="text" name="input_name">
-        <br>
-        <input type="submit" value="Envoyer" name="send">
-    </form>
+    <div class="wrap flex">
+        <a class="btn" href="hello">Hello page</a>
+        <!-- <form class="index" >
+            <p>Pokemon à chercher :</p>
+            <input type="text" name="inputAPI">
+            <input class="btn" type="submit" name="submitAPI">
+        </form> -->
+        <div class="flex">
+            <p>Pokemon à chercher :</p>
+            <textarea name="inputAPI" class="inputAPI"></textarea>
+            <button class="btnAPI">SEND</button>
+            <p>réponse : </p>
+            <p class="repAPI"></p>
+        </div>
+        
+    </div>
+    <script src="{{url_for('static', filename='js/ajax.js')}}"></script>
 </body>
 </html>

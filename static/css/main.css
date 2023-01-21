@@ -19,6 +19,10 @@ li {
     list-style-type: none;
 }
 
+input{
+    border: 0;
+    outline: none;
+}
 
 body {
     margin: 0px;
@@ -27,6 +31,8 @@ body {
 .flex {
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
 }
 .center {
     width: 70%;
@@ -43,10 +49,11 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 input[type="text"], p{
-    padding: 0;
+    
     margin-bottom:  1rem;
+    padding: 0 1rem;
 }
-form{
+form.hello{
     padding: 2rem;
     margin: 10rem;
     background-color: antiquewhite;
@@ -55,11 +62,42 @@ form{
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     
 }
-input, p {
+form.hello input, p {
     line-height: 1.3rem;
     width: 250px;
+    border-radius: 10px;
+    
+}
+form.hello input {
+    
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 p { 
     text-align: center;
     font-size: 1.2rem;
+}
+.btn {
+    padding: 10px 20px;
+    display: inline-flex;
+  align-items: flex-end; 
+  border: 1px solid red;
+  border-radius: 5px;
+}
+.wrap {
+    padding: 15px 30px;
+}
+form.index {
+    margin: 10px;
+    margin-top: 25px;
+    padding: 25px;
+    background-color: rgb(237, 239, 241);
+    width: fit-content;
+    
+}
+form.index input:first-of-type {
+    line-height: 2rem;
+    margin-bottom: 0;
+}
+form.index input:last-of-type {
+    margin-left: 1rem;
 }

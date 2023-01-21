@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flask</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/main.css')}}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <a class="btn" href="/">Home</a>
+    <form action="greet" method="post" class="hello">
+        {% for message in get_flashed_messages() %}
+            <p>{{message}}</p>
+        {% endfor %}
+        <input type="text" name="input_name">
+        <br>
+        <input type="submit" value="Envoyer" name="send">
+    </form>
+</body>
+</html>
